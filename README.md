@@ -9,32 +9,26 @@ Construir um pipeline analítico completo, desde a exploração e tratamento dos
 O projeto busca responder perguntas como:
 
 - Quais categorias e subcategorias geram maior receita e lucro?
-- Como os descontos impactam a margem de lucro?
 - Quais regiões e estados apresentam melhor desempenho?
 - Existe relação entre modo de envio, prazo de entrega e rentabilidade?
 - Quais produtos concentram maior prejuízo?
 
 ## Tecnologias utilizadas
 
-- Python
-- Pandas
-- SQLAlchemy
-- SQL Server
-- Power BI
-- DAX
-- Power Query
+| Camada | Tecnologias |
+|---|---|
+| 📥 Extração de Dados & ETL | Python, Pandas, SQLAlchemy |
+| 🗄️ Banco de dados | SQL Server |
+| 📊 Análise e visualização | Power BI, DAX, Power Query |
+| 📈 Business Intelligence | KPI Modeling, Analytical Views |
 
-## Pipeline do projeto
+## Pipeline
 
-```text
-CSV Raw Data
-   ↓
-Python Cleaning & Transformation
-   ↓
-SQL Server Database
-   ↓
-Analytical Views
-   ↓
-Power BI Dashboard
-   ↓
-Business Insights
+```mermaid
+flowchart LR
+    A[📄 CSV Raw Data] --> B[🐍 Python ETL & Cleaning]
+    B --> C[🗄️ SQL Server]
+    C --> D[📊 Analytical Views]
+    D --> E[📈 Power BI Dashboard]
+    E --> F[💡 Business Insights]
+```
